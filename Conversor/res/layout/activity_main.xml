@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.isa.conversor.MainActivity" >
+
+    <EditText
+        android:id="@+id/editTextCop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="38dp"
+        android:layout_toRightOf="@+id/textViewCop"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textViewCop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextCop"
+        android:layout_alignBottom="@+id/editTextCop"
+        android:layout_alignParentLeft="true"
+        android:text="COP:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewEur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewUsd"
+        android:layout_centerVertical="true"
+        android:text="EUR:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonConv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewEur"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:text="Convertir" />
+
+    <TextView
+        android:id="@+id/textViewUsd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewEur"
+        android:layout_alignLeft="@+id/textViewCop"
+        android:layout_marginBottom="30dp"
+        android:text="USD:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editTextUsds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextEurs"
+        android:layout_alignRight="@+id/editTextCop"
+        android:layout_alignTop="@+id/textViewUsd"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editTextEurs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewEur"
+        android:layout_toRightOf="@+id/textViewUsd"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal" />
+
+</RelativeLayout>
